@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A ready-to-build starter workspace for Alloy sessions." />
+    <title>Northstar Workspace</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0a1017;
+        color: #f4f7f9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: #0a1017;
+      }
+
+      .shell {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+        border-bottom: 1px solid #25313d;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+
+      .mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border-radius: 10px;
+        background: #43d9ad;
+        color: #07140f;
+        font-size: 18px;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #aab7c4;
+        font-size: 14px;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #43d9ad;
+        box-shadow: 0 0 0 4px rgb(67 217 173 / 12%);
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 72px;
+        align-items: center;
+        min-height: calc(100vh - 84px);
+        padding: 72px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #43d9ad;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 680px;
+        margin: 0;
+        font-size: clamp(46px, 7vw, 84px);
+        line-height: 0.98;
+        letter-spacing: -0.065em;
+      }
+
+      .lede {
+        max-width: 590px;
+        margin: 28px 0 0;
+        color: #aab7c4;
+        font-size: clamp(18px, 2vw, 21px);
+        line-height: 1.65;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 36px;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border: 1px solid #334250;
+        border-radius: 12px;
+        color: #f4f7f9;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      a:first-child {
+        border-color: #43d9ad;
+        background: #43d9ad;
+        color: #07140f;
+      }
+
+      a:hover,
+      a:focus-visible {
+        border-color: #79eac9;
+        outline: none;
+      }
+
+      .panel {
+        overflow: hidden;
+        border: 1px solid #293744;
+        border-radius: 20px;
+        background: #111a23;
+        box-shadow: 0 28px 80px rgb(0 0 0 / 32%);
+      }
+
+      .panel-top {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 16px 18px;
+        border-bottom: 1px solid #293744;
+      }
+
+      .window-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #5b6975;
+      }
+
+      .terminal {
+        padding: 28px;
+        color: #c7d1da;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .prompt {
+        color: #43d9ad;
+      }
+
+      .muted {
+        color: #758593;
+      }
+
+      .success {
+        margin-top: 24px;
+        padding: 14px 16px;
+        border: 1px solid #285e50;
+        border-radius: 10px;
+        background: #102a23;
+        color: #8cf0d2;
+      }
+
+      @media (max-width: 800px) {
+        .shell {
+          width: min(100% - 28px, 620px);
+        }
+
+        main {
+          grid-template-columns: 1fr;
+          gap: 48px;
+          min-height: auto;
+          padding: 56px 0;
+        }
+
+        h1 {
+          font-size: clamp(46px, 15vw, 68px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <div class="brand"><span class="mark">N</span> Northstar</div>
+        <div class="status"><span class="status-dot"></span> Alloy ready</div>
+      </header>
+      <main>
+        <section>
+          <p class="eyebrow">Workspace initialized</p>
+          <h1>Make the next thing matter.</h1>
+          <p class="lede">
+            A clean starting point for shaping ideas into useful products. The development environment is running and ready for the next iteration.
+          </p>
+          <div class="actions">
+            <a href="#environment">View environment</a>
+            <a href="https://github.com/qxtfunded/ne-making-">Open repository</a>
+          </div>
+        </section>
+        <aside class="panel" id="environment" aria-label="Environment status">
+          <div class="panel-top" aria-hidden="true">
+            <span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span>
+          </div>
+          <div class="terminal">
+            <div><span class="prompt">$</span> alloy inspect</div>
+            <div class="muted">Checking workspace services...</div>
+            <div>frontend&nbsp;&nbsp; <span class="prompt">listening :3000</span></div>
+            <div>network&nbsp;&nbsp;&nbsp; host</div>
+            <div>runtime&nbsp;&nbsp;&nbsp; containerized</div>
+            <div class="success">Ready for development</div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
