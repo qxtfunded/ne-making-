@@ -1,24 +1,9 @@
 {
-  "headers": [
-    {
-      "source": "/login",
-      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
-    },
-    {
-      "source": "/register",
-      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
-    },
-    {
-      "source": "/forgot-password",
-      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
-    },
-    {
-      "source": "/privacy-policy",
-      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
-    },
-    {
-      "source": "/service-agreement",
-      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
-    }
+  "rewrites": [
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/register", "destination": "/register.html" },
+    { "source": "/forgot-password", "destination": "/forgot-password.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy.html" },
+    { "source": "/service-agreement", "destination": "/service-agreement.html" }
   ]
 }
