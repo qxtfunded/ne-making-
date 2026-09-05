@@ -1,0 +1,24 @@
+{
+  "headers": [
+    {
+      "source": "/login",
+      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+    },
+    {
+      "source": "/register",
+      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+    },
+    {
+      "source": "/forgot-password",
+      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+    },
+    {
+      "source": "/privacy-policy",
+      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+    },
+    {
+      "source": "/service-agreement",
+      "headers": [{ "key": "Content-Type", "value": "text/html; charset=utf-8" }]
+    }
+  ]
+}
